@@ -17,7 +17,7 @@ import org.junit.Test;
  * @author usuario
  */
 public class CalculaTest {
-    
+    Calculadora calculadora = new Calculadora();
     public CalculaTest() {
     }
     
@@ -39,22 +39,23 @@ public class CalculaTest {
     
     @Test
     public void suma(){
-        int sum = (int) (Calculadora.suma(2,3));
+        
+        int sum = (int) (calculadora.suma(2,3));
         assertEquals(sum, 5);
     }
     @Test
     public void resta(){
-        int res = (int) (Calculadora.resta(3,2));
+        int res = (int) (calculadora.resta(3,2));
         assertEquals(res, 1);
     }
     @Test
     public void divide(){
-        int divide = (int) (Calculadora.divide(10,5));
-        assertEquals(divide, 2);
+        double divide =  calculadora.divide(10,5);
+        assertEquals(divide, 2, 0.1);
     }
     @Test
     public void multiplica(){
-        int multi = (int) (Calculadora.multiplica(2,3));
+        int multi = (int) (calculadora.multiplica(2,3));
         assertEquals(multi, 6);
     }
 
